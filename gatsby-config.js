@@ -14,7 +14,7 @@ module.exports = {
       name: `Yongmin Lee`,
     },
     description: `Yongmin Lee's Blog`,
-    siteUrl: `https:/ymlee.io/`,
+    siteUrl: `https://ymlee.io/`,
     // `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       
