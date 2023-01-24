@@ -5,20 +5,12 @@ on:
 name: build gatsby
 jobs:
   build_gatsby:
-    name: build
+    name: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-
-      - name: npm install 
-        run: npm install --force
-
-      - name: gatsby deploy
-        run: npm run deploy
-
-      - name: deploy
-        uses: Cecilapp/GitHub-Pages-deploy@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB }}
+      - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          build_dir: public
+          access-token: ${{ secret.ACCESS_TOKEN }}
+            deploy-branch: gh-pages
+
