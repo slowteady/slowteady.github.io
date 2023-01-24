@@ -98,14 +98,14 @@ npm run deploy
 ```
 를 사용하여 간단하게 배포할 수 있다.
 
-## 4. 배포 자동화
+<!-- ## 4. 배포 자동화
 npm run deploy 명령어를 통해 배포할 수 있지만
 수정 할 때 마다 명령을 실행해주기에는 은근히 귀찮고 번거롭다.
 
 Github Action을 통하여 배포 자동화를 해주면, 커밋 할 때 마다 자동으로 배포가 된다.
 
-**settings > Developer settings > Tokens** 메뉴로 간다.
-![open-blog-3.png](open-blog-3.png)
+**settings > Developer settings > Tokens** 메뉴로 간다. -->
+
 
 
 
