@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: yarn install
-        run: yarn install
+      - name: npm install
+        run: npm install
 
       - name: gatsby build
         env:
           GH_API_KEY: ${{ secrets.GITHUB }}
-        run: yarn build
+        run: npm build
 
       - name: deploy
         uses: maxheld83/ghpages@v0.2.1
