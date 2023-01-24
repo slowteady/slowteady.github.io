@@ -13,10 +13,10 @@ jobs:
       - name: npm install 
         run: npm install --force
 
-      - name: gatsby build
+      - name: gatsby deploy
         env:
           GH_API_KEY: ${{ secrets.GITHUB }}
-        run: npm build
+        run: npm deploy
 
       - name: deploy
         uses: maxheld83/ghpages@v0.2.1
