@@ -5,12 +5,12 @@ on:
       - main
 jobs:
   build_gatsby:
-  - name: 😎 Setup Node
-  - uses: actions/setup-node@v3
+    name: 😎 Setup Node
+    uses: actions/setup-node@v3
     with:
       node-version: '18.4.0'
 
-  - name: deploy
+    name: deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
