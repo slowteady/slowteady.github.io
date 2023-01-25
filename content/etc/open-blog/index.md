@@ -1,5 +1,4 @@
 ---
-emoji: 
 title: 블로그 생성기 with Gatsby
 date: '2022-01-23 00:00:00'
 author: 이용민
