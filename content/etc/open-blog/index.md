@@ -47,6 +47,9 @@ categories: etc
 
 [줌코딩](https://github.com/zoomkoding/zoomkoding-gatsby-blog)님의 템플릿이 마음에 들어서 사용했다.   
 
+> 🙋🏻‍♂️ 오래된 템플릿 사용 시, package.json의 dependency끼리 충돌이 일어나 오류가 생길 수 있다.   
+이 경우, 버전을 하나씩 맞춰가면서 수정해주거나 npm의 --force 옵션 등을 이용하여 해결해야한다.
+
 다른 스타일의 템플릿을 원한다면 [Gatsby Starters](https://www.gatsbyjs.com/starters)를 이용하면 된다.
 
 ㅇ **템플릿 설치**
@@ -96,15 +99,64 @@ npm install gh-pages --save-dev
 ```bash
 npm run deploy
 ```
-를 사용하여 간단하게 배포할 수 있다.
+를 사용하여 배포할 수 있다.
 
-<!-- ## 4. 배포 자동화
+## 4. 배포 자동화
 npm run deploy 명령어를 통해 배포할 수 있지만
 수정 할 때 마다 명령을 실행해주기에는 은근히 귀찮고 번거롭다.
 
 Github Action을 통하여 배포 자동화를 해주면, 커밋 할 때 마다 자동으로 배포가 된다.
 
-**settings > Developer settings > Tokens** 메뉴로 간다. -->
+**settings > Developer settings > Tokens** 메뉴로 간다.
+
+![open-blog-3.png](open-blog-3.png)
+
+**Generate new token > repo** 부분을 체크 후 토큰을 생성하고 token value를 복사하여 저장한다.
+> 🙋🏻‍♂️ token value는 재발급이 안되기 떄문에 꼭 복사해야한다!!
+
+![open-blog-4.png](open-blog-4.png)
+
+**블로그 repository > settings > secrets and variables > Action** 메뉴에서
+**New repository secret**을 클릭, 변수로 사용할 이름을 지정하고 token value를 내용으로 추가하여
+secrets을 추가시켜준다.
+
+![open-blog-5.png](open-blog-5.png)
+
+**블로그 repository > Actions**로 이동하여 **set up a workflow yourself**를 클릭한다.
+
+![open-blog-6.png](open-blog-6.png)
+
+main.yml 이름으로 생성하고, 트리거를 실행할 branch를 선택한다.
+
+```bash
+name: Gatsby Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_gatsby:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+```
+위와 같은 형식으로 설정 해주면되고
+
+secrets.ACCESS_TOKEN은 설정한 secrets 변수 이름과 맞춰주면 된다.
+
+![open-blog-7.png](open-blog-7.png)
+
+git push후 정상적으로 동작하는지 확인한다.
+
+***
 
 
 
