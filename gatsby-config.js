@@ -26,17 +26,17 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }],
+            policy: [{ userAgent: '*', allow: ['/'] }],
           },
           'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            policy: [{ userAgent: '*', allow: ['/'] }],
+            sitemap: 'https://slowteady.github.io/sitemap.xml',
+            host: 'https://slowteady.github.io/',
           },
           'deploy-preview': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            policy: [{ userAgent: '*', allow: ['/'] }],
+            sitemap: 'https://slowteady.github.io/sitemap.xml',
+            host: 'https://slowteady.github.io/',
           },
         },
       },
@@ -120,6 +120,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
