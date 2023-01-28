@@ -21,4 +21,3 @@ categories: react
 
 📂 **참고자료**
 * [VELOPERT님 글](https://velopert.com/3612)
-<!-- * [생활코딩 강의](https://www.inflearn.com/course/react-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9/dashboard) -->
