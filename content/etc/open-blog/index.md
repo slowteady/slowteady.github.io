@@ -157,6 +157,12 @@ git push후 정상적으로 동작하는지 확인한다.
 
 ***
 
+ㅇ **참고자료**
+
+ * [gparkkii님 글](https://velog.io/@gparkkii/build-gatsby-blog)
+ * [줌코딩님 글](https://www.zoomkoding.com/gatsby-starter-zoomkoding-introduction/)
+* [유림님 글](https://milooy.github.io/build-blog-with-gatsby/)
+
 
 
 
