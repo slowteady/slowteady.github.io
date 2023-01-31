@@ -1,6 +1,6 @@
 ---
 title: Props
-date: '2022-01-29 00:00:00'
+date: '2022-01-31 00:00:00'
 author: 이용민
 tags: react 
 categories: react
