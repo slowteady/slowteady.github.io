@@ -1,5 +1,5 @@
 ---
-title: Props & State
+title: Props
 date: '2022-02-02 00:00:00'
 author: 이용민
 tags: react 
