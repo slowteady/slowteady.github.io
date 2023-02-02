@@ -62,7 +62,7 @@ Hello.defaultProps = {
 김캔디 입니다.
 이용민 입니다.
 ```
-
+---
 
 📂 **참고자료** 
 * [VELOPERT님 글](https://velopert.com/3621)
