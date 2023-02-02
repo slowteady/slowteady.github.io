@@ -35,6 +35,33 @@ function Hello(props) {
 김캔디 입니다.
 ```
 
+## defaultProps
+컴포넌트에 props를 지정하지 않았을 때는 defaultProps를 지정하여 기본값을 설정할 수 있다.
+
+```bash
+function App() {
+  return (
+    <div>
+      <Hello name="김캔디"/>
+      <Hello />
+    </div>
+  );
+}
+```
+```bash
+function Hello(props) {
+  return <div>{props.name} 입니다.</div>
+}
+
+Hello.defaultProps = {
+  name: '이용민'
+}
+```
+로 defaultProps를 지정하고 실행 시 결과는
+```bash
+김캔디 입니다.
+이용민 입니다.
+```
 
 
 📂 **참고자료** 
