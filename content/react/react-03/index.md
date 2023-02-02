@@ -1,6 +1,6 @@
 ---
 title: Props & State
-date: '2022-01-30 00:00:00'
+date: '2022-02-02 00:00:00'
 author: 이용민
 tags: react 
 categories: react
@@ -17,27 +17,25 @@ props는 직접 수정할 수 없다는 특징이 있다.
 
 ```bash
 function App() {
-    return (
-        <div>
-            <main name="김캔디"/>
-        </div>
-    )
+  return (
+    <div>
+      <Hello name="김캔디"/>
+    </div>
+  );
 }
 ```
 으로 name props를 전달하고
 ```bash
-function main(props) {
-    return (
-        <div>
-            <main>
-                <p>{props.name} 입니다.</p>
-            </main>
-        </div>
-    )
+function Hello(props) {
+  return <div>{props.name} 입니다.</div>
 }
 ```
-의 렌더링된 값을 본다면 
-**김캔디 입니다.** 로 나올 것이다.
+실행 시 결과는 
+```bash
+김캔디 입니다.
+```
+
+
 
 📂 **참고자료** 
 * [VELOPERT님 글](https://velopert.com/3621)
