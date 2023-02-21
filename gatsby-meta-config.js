@@ -1,6 +1,6 @@
 module.exports = {
   title: `slowteady`,
-  description: `조금은 느린 블로그`,
+  description: `Slow But Steady`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://slowteady.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
