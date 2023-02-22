@@ -55,7 +55,7 @@ number라는 변수와 setNumber라는 Setter를 선언하고 useState(0)로 0�
     setNumber((prevNumber) => prevNumber + 1)
   }
 ```
-처럼 선언하여 이전 state의 값을 사용할 수도 있다.
+위 처럼 선언하여 이전 state의 값을 사용할 수도 있다.
 
 > ❗️ 함수 컴포넌트는 state의 변화 감지 시 클래스형 컴포넌트와 같이 render() 메소드만 재실행 하는 것이 아니라, 컴포넌트 자체를 재실행한다.
 
@@ -63,5 +63,5 @@ number라는 변수와 setNumber라는 Setter를 선언하고 useState(0)로 0�
 
 📂 **참고자료**
 
-- [VELOPERT님 글](https://velopert.com/3621)
+- [VELOPERT님 글](https://velopert.com/3629)
 - [생활코딩님 강의](https://www.inflearn.com/course/react-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9/dashboard)
