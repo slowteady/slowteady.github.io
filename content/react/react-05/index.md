@@ -28,7 +28,7 @@ React Hooks는 React v16.8 기준으로 등장하여 함수형 컴포넌트에�
       <>
         <div>Count: {count}</div>
         <button onClick={() => setCount(initialCount)}>Reset</button>
-        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button> # ②
+        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button> # ② prevState값 사용
         <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
       </>
     );
@@ -160,8 +160,8 @@ const lecture = () => {
 ```
 
 위와 같이 useMemo를 선언하고 호출 함수를 감싸준다.  
-두번째 인자로 변화 감지 시 값을 갱신할 요소를 대괄호 안에 넣어준다.   
-값을 기억했다가 변화를 감지했을 때 새로운 값을 내어주는 방식이다.   
+두번째 인자로 변화 감지 시 값을 갱신할 요소를 대괄호 안에 넣어준다.  
+값을 기억했다가 변화를 감지했을 때 새로운 값을 내어주는 방식이다.  
 위의 경우 list의 값 변화를 감지했을 때, 값을 갱신한다.
 
 ### ❗️ 결과
@@ -169,6 +169,30 @@ const lecture = () => {
 ![react-04.png](react-04.png)
 
 위와 같이 list값 갱신 전까지 값을 갱신하지 않는다.
+
+---
+
+## 5. useCallback
+
+```bash
+const onChange = useCallback((e) => { # ① useCallback 사용
+  setNumber(e.target.value);
+}, []);
+
+const onSubmit = useCallback((e) => { # ① useCallback 사용
+  const nextList = list.concat(parseInt(number));
+  setList(nextList);
+  setNumber("");
+  inputEl.current.focus();
+}, [number, list]);
+```
+
+① 위와 같은 형태로 함수에 useCallback을 사용한다.  
+useCallback은 useMemo와 동일하게 성능 최적화를 위해 사용한다.  
+useCallback을 사용하면 리렌더링 시, 배열에 설정한 값이 변경되기 전까지 함수를 다시 호출하지 않고 재사용한다.  
+useCallback은 useMemo를 좀 더 간단하게 함수에 사용하기 위해 사용한다.
+
+> ❗️ useCallback(fn, deps)은 useMemo(() => fn, deps) 와 같다.
 
 ---
 
