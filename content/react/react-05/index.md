@@ -196,6 +196,42 @@ useCallback은 useMemo를 좀 더 간단하게 함수에 사용하기 위해 사
 
 ---
 
+## 6. useContext
+
+Props는 기본적으로 부모 컴포넌트가 자식 컴포넌트에게 넘겨준다.  
+그러다보니 한참 아래에 있는 자식 컴포넌트에게까지 Props를 전달해주기 위해서는 전달의 전달을 거쳐서 가야한다는 문제점이 발생한다.  
+이 문제점을 해결하기 위해, 한번에 Props를 전달할 수 있는 useContext를 사용한다.
+
+```bash
+export const AppContext = createContext();
+# ① export const 변수 = createContext(initialValue);
+```
+
+① 위와 같은 형태로 선언하고 initialValue는 초기값이 필요할 시 넣어준다.
+
+```bash
+<AppContext.Provider value={ sum }> # ① 변수.Provider로 사용
+  <ul>
+    {list.map((value, index) => (
+      <Li key={index} value={value} />
+    ))}
+  </ul>
+</AppContext.Provider>
+```
+① 변수.Privider로 Props를 전달할 하위 컴포넌트를 감싸고 value를 통하여 Props를 전달한다.
+
+```bash
+const Context = () => {
+  const sum = useContext(AppContext); # ① useContext 선언
+  return <div>합계: {sum}</div>
+}
+```
+① 몇번째 자식 컴포넌트인지와 상관없이 부모가 전달해준 Props 값을 사용할 컴포넌트에서 위와 같이 useContext의 아규먼트로 createContext를 선언했던 변수를 import로 가져와 넣어주고 사용한다.
+ 
+
+
+---
+
 📂 **참고자료**
 
 - [React 공식 문서](https://ko.reactjs.org/docs/hooks-reference.html)
