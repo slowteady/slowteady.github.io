@@ -228,7 +228,41 @@ const Context = () => {
 ```
 ① 몇번째 자식 컴포넌트인지와 상관없이 부모가 전달해준 Props 값을 사용할 컴포넌트에서 위와 같이 useContext의 아규먼트로 createContext를 선언했던 변수를 import로 가져와 넣어주고 사용한다.
  
+---
 
+## 7. useReducer
+useReducer는 useState를 대체할 수 있다.   
+관리해야할 state가 많아져 조금 더 복잡한 상태 관리가 필요한 경우에 적합하다.
+
+```bash
+function reducer(state, action) { # ① reducer 함수 선언
+  switch(action) {
+    case 'INCREMENT' :
+      return { value: state.value + 1 };
+    case 'DECREMENT' :
+      return { value: state.value - 1 };
+    default :
+      return state;
+  }
+}
+
+const Counter = () => {
+  const [state, dispatch] = useReducer(reducer, { value: 0 }); # ② useReducer 선언
+
+  return (
+    <div>
+      <p>
+        현재 카운터 값은 <b>{state.value}</b> 입니다.
+      </p>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>+1</button> # ③ dispatch 선언
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>-1</button>
+    </div>
+  );
+};
+```
+① 액션을 받아와 처리할 로직을 짜는 함수이고 보통 switch문으로 분기처리한다.   
+② 첫번째 아규먼트에는 reducer함수, 두번째 아규먼트에는 초기값을 넣어준다.   
+③ dispatch를 사용하여 action을 발생 시킨다. action을 넣어주면 reducer 함수가 호출된다.
 
 ---
 
