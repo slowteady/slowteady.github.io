@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://slowteady.github.io/sitemap-index.xml
+Host: https://slowteady.github.io
