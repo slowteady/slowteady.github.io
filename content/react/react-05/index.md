@@ -57,6 +57,37 @@ React Hooks는 React v16.8 기준으로 등장하여 함수형 컴포넌트에�
 
 useEffect는 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하도록 도와준다.
 
+```bash
+  const Example = () => {
+  useEffect(() => {
+    console.log("마운트 될 때만 실행");
+  }, []);
+  # ① useEffect 선언
+
+  return <div>useEffect</div>;
+};
+```
+
+① useEffect에서 두번째 아규먼트로 빈 배열을 넣어주면 마운트 시에만 실행한다.   
+빈 배열이 아닌 다른 값을 넣어주면 그 값이 갱신될 때 useEffect를 재실행한다. 
+
+```bash
+  const Example = () => {
+  useEffect(() => {
+    console.log("마운트 될 때만 실행");
+    return () => {
+      console.log("뒷정리");
+    } # ② 뒷정리 함수 반환
+  }, []);
+  
+
+  return <div>useEffect</div>;
+};
+```
+
+②  컴포넌트가 언마운트 되기 전이나 업데이트 되기 직전에 수행하고 싶은 작업이 있으면 뒷정리 함수를 반환해주어야 한다.   
+언마운트 때만 뒷정리 함수를 호출하고 싶을 시, 두번째 아규먼트로 빈 배열을 주면 되고, 업데이트 때도 호출하고 싶을 시, 두번째 인자로 갱신되는 값을 넣어주면 된다.
+
 ---
 
 ## 3. useRef
