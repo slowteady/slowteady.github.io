@@ -1,37 +1,80 @@
 ---
-title: Start React
-date: '2022-01-29 00:00:00'
+title: Props
+date: '2022-02-02 00:00:00'
 author: 이용민
-tags: react 
+tags: react
 categories: react
 ---
 
 ![react-logo.png](react-logo.png)
 
-## 설치
-리액트를 사용하기 위해서는 리액트 라이브러리를 설치해야한다.
-```bash
-npm install -g create-react-app
-```
-create-react-app 명령어를 통해 리액트에서 제공하는 패키지로 설치를 하게되면 리액트 사용에 도움을 주는 Webpack, Babel등을 하나하나 직접 설치할 필요없이, 한번에 설치할 수 있다.
-> 🙋🏻‍♂️ npm 명령어를 사용하기 위해서는 nodeJS를 설치해야하고 node 버전 관리를 편하게 도와주는 nvm을 통하여 설치하는 것을 추천한다!   > [VELOPERT님 글 참고](https://velopert.com/3621)   
+리액트 컴포넌트에서 데이터는 **Props**와 **State** 두가지를 다룬다.
 
+## Props
 
-## 사용
-```bash
-create-react-app 프로젝트명
-```
-create-react-app 명령어를 통해 간단하게 리액트 프로젝트를 생성할 수 있다.
+props는 부모 컴포넌트가 자식 컴포넌트에게 주는 값이다.  
+부모 컴포넌트가 자식 컴포넌트에게 값을 주어야 사용할 수 있다.  
+props는 직접 수정할 수 없다는 특징이 있다.
 
 ```bash
-cd 프로젝트명
-npm start
+function App() {
+  return (
+    <div>
+      <Hello name="김캔디"/>
+    </div>
+  );
+}
 ```
-를 통해 리액트 프로젝트를 시작할 수 있다.
-> 🙋🏻‍♂️ create-react-app으로 리액트 프로젝트 생성 시 Babel, Webpack 등 리액트 프로젝트에 도움을 주는 도구들이 같이 설치된다.   
-사용하지 않는 도구가 있다면 create-react-app을 사용하지 않고 직접 프로젝트를 구성하는게 리소스 낭비를 줄인다!
+
+으로 name props를 전달하고
+
+```bash
+function Hello(props) {
+  return <div>{props.name} 입니다.</div>
+}
+```
+
+실행 시 결과는
+
+```bash
+김캔디 입니다.
+```
+
+## defaultProps
+
+컴포넌트에 props를 지정하지 않았을 때는 defaultProps를 지정하여 기본값을 설정할 수 있다.
+
+```bash
+function App() {
+  return (
+    <div>
+      <Hello name="김캔디"/>
+      <Hello />
+    </div>
+  );
+}
+```
+
+```bash
+function Hello(props) {
+  return <div>{props.name} 입니다.</div>
+}
+
+Hello.defaultProps = {
+  name: '이용민'
+}
+```
+
+로 defaultProps를 지정하고 실행 시 결과는
+
+```bash
+김캔디 입니다.
+이용민 입니다.
+```
 
 ---
 
-📂 **참고자료** 
-* [VELOPERT님 글](https://velopert.com/3621)
+📂 **참고자료**
+
+- [VELOPERT님 글](https://velopert.com/3629)
+- [생활코딩님 강의](https://www.inflearn.com/course/react-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9/dashboard)
