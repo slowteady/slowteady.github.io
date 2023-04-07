@@ -243,10 +243,11 @@ animal.sayName();
 > 이름은 Candy 입니다.
 ```
 
-### ❓화살표 함수에서는 this의 스코프가 다르다던데?
+### ❓화살표 함수에서는 this가 다르다던데?
 
-> 화살표 함수의 가장 큰 특징이다. 함수 호출에 따라 this에 바인딩할 객체가 달라지는 일반 함수와 달리, 화살표 함수는 함수를 선언할 때 this에 바인딩할 객체가 정적으로 결정된다.  
-> ✔[화살표 함수 글](https://slowteady.github.io/javascript/javascript-03/)
+> 화살표 함수의 가장 큰 특징이다.  
+> 함수 호출에 따라 this에 바인딩할 객체가 동적으로 결정되는 일반 함수와 달리, 화살표 함수는 함수를 선언할 때 this에 바인딩할 객체가 정적으로 결정된다.  
+> ✔ [화살표 함수 글](https://slowteady.github.io/javascript/javascript-03/)
 
 ---
 
