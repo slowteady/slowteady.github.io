@@ -3,7 +3,7 @@ emoji: 📖
 title: 블로그 생성기 with Gatsby
 date: '2023-01-23 00:00:00'
 author: 이용민
-tags: 블로그 github-pages gatsby 
+tags: 블로그 github-pages gatsby
 categories: etc
 ---
 
@@ -15,7 +15,7 @@ categories: etc
 
 정확한 이해를 위해 중간중간 정리를 해야할 필요성을 느꼈고, 블로그를 해야겠다는 생각이 들었다.
 
-***
+---
 
 ## 1. Github Pages & Gatsby
 
@@ -37,7 +37,7 @@ categories: etc
 
 학습중인 리액트를 사용할 기회도 있고 나만의 디자인으로 이루어진 블로그를 만들어 볼 욕심도 있어서 개츠비를 선택했다.
 
-***
+---
 
 ## 2. 설치
 
@@ -48,7 +48,7 @@ categories: etc
 
 [줌코딩](https://github.com/zoomkoding/zoomkoding-gatsby-blog)님의 템플릿이 마음에 들어서 사용했다.
 
-> 🙋🏻‍♂️ 오래된 템플릿 사용 시, package.json의 dependency끼리 충돌이 일어나 오류가 생길 수 있다.
+> 🙋🏻‍♂️ 오래된 템플릿 사용 시, package.json의 dependency끼리 충돌이 일어나 오류가 생길 수 있다.  
 > 이 경우, 버전을 하나씩 맞춰가면서 수정해주거나 npm의 --force 옵션 등을 이용하여 해결해야한다.
 
 다른 스타일의 템플릿을 원한다면 [Gatsby Starters](https://www.gatsbyjs.com/starters)를 이용하면 된다.
@@ -69,7 +69,7 @@ npm start
 
 ### 2-2. Repository 생성
 
-**${github_id}.github.io**  의 형태로 레포지토리를 생성한다.
+**${github_id}.github.io** 의 형태로 레포지토리를 생성한다.
 
 ![open-blog-2.png](open-blog-2.png)
 
@@ -84,7 +84,7 @@ git remote add origin https://github.com/${github_id}/${repository_name}.git
 git push -u origin main
 ```
 
-***
+---
 
 ## 3. 배포
 
@@ -101,7 +101,7 @@ npm install gh-pages --save-dev
 ```json
 {
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public" 
+    "deploy": "gatsby build && gh-pages -d public"
   }
 }
 ```
@@ -113,6 +113,8 @@ npm run deploy
 ```
 
 를 사용하여 배포할 수 있다.
+
+---
 
 ## 4. 배포 자동화
 
@@ -126,6 +128,7 @@ Github Action을 통하여 배포 자동화를 해주면, 커밋 할 때 마다 
 ![open-blog-3.png](open-blog-3.png)
 
 **Generate new token > repo** 부분을 체크 후 토큰을 생성하고 token value를 복사하여 저장한다.
+
 > 🙋🏻‍♂️ token value는 재발급이 안되기 떄문에 꼭 복사해야한다!!
 
 ![open-blog-4.png](open-blog-4.png)
@@ -171,10 +174,10 @@ secrets.ACCESS_TOKEN은 설정한 secrets 변수 이름과 맞춰주면 된다.
 
 git push후 정상적으로 동작하는지 확인한다.
 
-***
+---
 
 ㅇ **참고자료**
 
-* [gparkkii님 글](https://velog.io/@gparkkii/build-gatsby-blog)
-* [줌코딩님 글](https://www.zoomkoding.com/gatsby-starter-zoomkoding-introduction/)
-* [유림님 글](https://milooy.github.io/build-blog-with-gatsby/)
+- [gparkkii님 글](https://velog.io/@gparkkii/build-gatsby-blog)
+- [줌코딩님 글](https://www.zoomkoding.com/gatsby-starter-zoomkoding-introduction/)
+- [유림님 글](https://milooy.github.io/build-blog-with-gatsby/)

@@ -27,6 +27,7 @@ categories: react
 ```bash
 npm install -g create-react-app
 ```
+
 > 🙋🏻‍♂️ -g 옵션으로 글로벌하게 설치하지 않고, npx를 이용하여 사용해도 된다.
 
 create-react-app 명령어를 통해 리액트에서 제공하는 패키지로 설치를 하게되면 리액트 사용에 도움을 주는 Webpack, Babel등을 하나하나 직접 설치할 필요없이, 한번에 설치할 수 있다.
