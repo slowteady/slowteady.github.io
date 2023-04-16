@@ -127,7 +127,7 @@ new Promise(function(resolve, reject) {});
 
 콜백 함수를 선언할 수 있고, 인자는 resolve, reject가 들어간다.
 
-② Fulfilled
+② Fulfilled  
 이행 상태라는 것을 의미하고, then 키워드를 사용하여 리턴 값을 받을 수 있다.
 
 ```bash
@@ -155,7 +155,7 @@ getData().then(function(returnData) {
 
 위와 같이 then을 이용하여 이행 된 결과 값을 리턴 받을 수 있다.
 
-③ Rejected
+③ Rejected  
 실패 상태라는 것을 의미하고, 문제가 생겼을 때 Rejected 상태가 된다.
 
 ```bash
