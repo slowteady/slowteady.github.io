@@ -8,10 +8,6 @@ categories: javascript
 
 ![javascript-logo.png](javascript-logo.png)
 
-자바스크립트에서 정말 많이 사용되는 this 키워드.  
-정작 사용할 때는 개념을 이해하지 못한채로 쓴 적이 많은 것 같다.  
-this를 잘 다루기 위해서 개념을 정립해본다.
-
 ## ✔ this
 
 ① 자바스크립트의 this는 함수가 호출될 때, 암묵적으로 전달 받는다.
