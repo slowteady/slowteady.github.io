@@ -65,7 +65,7 @@ console.log(animal.hasOwnProperty('name'));
 > true
 ```
 
-animal은 hasOwnProperty 메소드를 정의하지 않았는데 결과는 true이다.
+animal은 hasOwnProperty 메소드를 정의하지 않았는데 결과는 true이다.  
 [[Prototype]]에 의해 부모 프로토타입 객체 Object.prototype의 hasOwnProperty 메소드를 호출했기 때문에 가능하다.
 
 ## ✔ 프로토타입 확장
