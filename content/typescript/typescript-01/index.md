@@ -47,12 +47,13 @@ function func(num: number): number {
 선언된 함수의 리턴 타입과 다른 타입의 값을 리턴하는 로직을 구현하거나, 선언된 함수의 타입과 다른 타입의 아규먼트로 호출한다면 오류가 발생한다.
 
 ```bash
-const func = (num: number, person: string): string => {
-  return `${num} ${person}`;
+const func = (num: number, person: string): void => {
+  console.log(`${num} ${person}`);
 }
 ```
 
-화살표 함수로는 위와 같이 표현할 수 있다.
+화살표 함수로는 위와 같이 표현할 수 있고 return이 없다면 void 타입을 넣어준다.
+
 
 ---
 
