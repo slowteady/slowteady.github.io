@@ -100,6 +100,98 @@ randomCoordinate({1, 2});
 
 위와 같이 리턴할 객체 내의 프로퍼티에 대해 타입 지정이 가능하다.
 
+(3) 타입 별칭
+
+```bash
+type Point = {
+  x: number;
+  y: number;
+};
+
+function doublePoint(point: Point): Point {
+  return { x: point.x * 2, y: point.y * 2 };
+}
+
+doublePoint({x:1, y:2});
+```
+
+위와 같이 객체 리터럴을 선언하듯이, 타입 또한 type 키워드를 사용하여 변수로 선언하여 다룰 수 있다.
+
+(4) 중첩 객체
+
+```bash
+type Song = {
+  title: string;
+  artist: string;
+  numStreams: number;
+  credits: { producer: string; writer: string };
+};
+
+function calculatePayout(song: Song): number {
+  return song.numStreams * 0.0033;
+}
+
+const mySong: Song = {
+  title: "Unchained Melody",
+  artist: "Righteous Brothers",
+  numStreams: 1234,
+  credits: {
+    producer: "Phil Spector",
+    writer: "Alex North",
+  },
+};
+
+calculatePayout(mySong);
+```
+
+위와 같이 중첩 객체의 프로퍼티에도 타입을 지정하여 사용할 수 있다.
+
+(5) 선택적 프로퍼티
+
+```bash
+type Point = {
+  x: number;
+  y: number;
+  z?: number; // 선택적 프로퍼티
+};
+const myPoint: Point = { x: 1, y: 3 };
+```
+
+위의 코드에서 ? 키워드를 사용하면 필수가 아닌 선택적인 프로퍼티로 지정할 수 있다.
+
+(6) readonly
+
+```bash
+type User = {
+  readonly id: number;
+  username: string;
+};
+const user: User = {
+  id: 12345,
+  username: "cat",
+};
+
+user.id = 123; // Cannot assign to 'id' because it is a read-only property
+user.username = "dog";
+```
+
+readonly 키워드를 사용하면 객체에 접근하여 값을 변경하지 못하게 할 수 있다.
+
+(7) 교차 타입
+
+```bash
+type Circle = {
+  radius: number;
+};
+type Colorful = {
+  color: string;
+};
+
+type colorfulCircle = Circle & Colorful;
+```
+
+& 키워드를 사용하면 교차 타입을 만들 수 있다.
+
 ---
 
 📂 **참고자료**
