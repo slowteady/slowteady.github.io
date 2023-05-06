@@ -243,7 +243,7 @@ coordinates = { lat: 321.213, long: 23.334 };
 | 키워드를 사용하여 유니온 타입을 설정할 수 있고 타입을 선택적으로 강제할 수 있다.
 또한 함수 파라미터, 리턴 타입으로도 사용이 가능하다.
 
-⑥ Tuples
+⑥ 튜플
 
 튜플은 고정된 개수의 요소로 이루어진 배열 타입이다.
 
@@ -253,6 +253,77 @@ tuples = ["asd", 123]; // 에러
 ```
 
 위와 같이 튜플을 사용하면 배열의 타입 순서를 강제할 수 있다.
+
+⑦ 이넘
+
+이넘은 명명된 상수이다.
+
+```bash
+enum Responese {
+  A,
+  B,
+  C
+}
+enum Res {
+  A = "asd",
+  B = 123,
+}
+
+function b(status: Res) {
+  console.log(status);
+}
+
+b(Res.A);
+
+> asd
+```
+
+위와 같이 고정된 상수를 추가하여 값을 강제할 수 있다.
+
+⑧ 인터페이스
+
+(1) 기본 사용법
+
+```bash
+interface Dog {
+  name: string;
+  age: number;
+}
+
+const myDog: Dog = {
+  name: "Candy",
+  age: 14
+}
+```
+
+위와 같이 인터페이스를 이용하여 객체 프로퍼티의 타입을 강제할 수 있다.
+
+(2) 상속
+
+```bash
+interface Dog {
+  name: string;
+  age: number;
+}
+interface Product {
+  name: string,
+  price: number,
+}
+
+interface Obj extends Product, Dog {
+  spec: string 
+}
+
+const object: Obj = {
+  name: "abc",
+  spec: "abc",
+  age: 1,
+  price: 10
+}
+
+```
+
+위와 같이 상속을 받아 타입 지정을 확장할 수 있다.
 
 ---
 
