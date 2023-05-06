@@ -16,7 +16,7 @@ categories: typescript
 오류로 출력되지 않기 때문에 처리하기가 까다롭고 이러한 점은 치명적인 오류와 버그로 이어질 수가 있다.  
 타입스크립트는 이러한 오류와 버그가 발생하는 것을 방지하기 위해 사용된다.
 
-## ✔ 타입 애너테이션 기초
+## ✔ 타입 사용법 기초
 
 ① 기본 타입 지정
 
@@ -191,6 +191,68 @@ type colorfulCircle = Circle & Colorful;
 ```
 
 & 키워드를 사용하면 교차 타입을 만들 수 있다.
+
+④ 배열
+
+```bash
+const activeUsers: string[] = [];
+activeUsers.push("Tony");
+
+const ageList: number[] = [45, 21, 11];
+ageList[0] = 99;
+ageList[0] = "123"; // Type 'string' is not assignable to type 'number'
+```
+
+위와 같이 배열의 타입을 설정할 수 있다.
+
+```bash
+type Point = {
+  x: number;
+  y: number;
+};
+
+const coords: Point[] = [];
+
+coords.push({ x: 23, y: 3 });
+```
+
+type 키워드로 선언한 타입 변수로도 타입 지정이 가능하다.
+
+⑤ 유니온 타입  
+
+유니온 타입을 이용하면 여러개의 타입을 쉽게 다룰 수 있다.
+
+```bash
+let age: number | string = 21;
+age = 23;
+age = "24";
+
+type Point = {
+  x: number;
+  y: number;
+};
+type Loc = {
+  lat: number;
+  long: number;
+};
+
+let coordinates: Point | Loc = { x: 1, y: 34 };
+coordinates = { lat: 321.213, long: 23.334 };
+```
+
+| 키워드를 사용하여 유니온 타입을 설정할 수 있고 타입을 선택적으로 강제할 수 있다.
+또한 함수 파라미터, 리턴 타입으로도 사용이 가능하다.
+
+⑥ Tuples
+
+튜플은 고정된 개수의 요소로 이루어진 배열 타입이다.
+
+```bash
+let tuples: [number, string] = [123, "asd"];
+tuples = ["asd", 123]; // 에러
+```
+
+위와 같이 튜플을 사용하면 배열의 타입 순서를 강제할 수 있다.
 
 ---
 
