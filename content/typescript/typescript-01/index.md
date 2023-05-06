@@ -37,23 +37,68 @@ movie = 1; // Type 'number' is not assignable to type 'string'
 
 ② 함수
 
+(1) 함수 파라미터, 리턴 타입 지정
+
 ```bash
 function func(num: number): number {
   return num * num;
 }
+
+func(1);
 ```
 
 위와 같이 파라미터의 타입과 리턴 타입을 할당할 수 있다.  
 선언된 함수의 리턴 타입과 다른 타입의 값을 리턴하는 로직을 구현하거나, 선언된 함수의 타입과 다른 타입의 아규먼트로 호출한다면 오류가 발생한다.
 
+(2) void 타입
+
 ```bash
 const func = (num: number, person: string): void => {
   console.log(`${num} ${person}`);
 }
+
+func(1, "Thomas");
 ```
 
 화살표 함수로는 위와 같이 표현할 수 있고 return이 없다면 void 타입을 넣어준다.
 
+(3) never 타입
+
+```bash
+function never(): never {
+  throw new Error("ERROR");
+}
+```
+
+never 타입은 절대로 리턴이 없을 경우에 지정하는 타입이다.  
+unreachable code가 있다면 사용이 불가능하다.  
+따라서, 반환값이 아예 없는 예외 처리의 경우나 무한루프를 도는 로직과 같은 경우에 사용된다.
+
+③ 객체
+
+(1) 함수 파라미터 객채 내의 타입 지정
+
+```bash
+function printName(person: { first: string; last: string }): void {
+  console.log(`${person.first} ${person.last}`);
+}
+
+printName({ first: "Thomas", last: "Jenkins" });
+```
+
+위와 같이 객체 내의 타입 지정이 가능하다.
+
+(2) 함수 리턴 객체 내의 타입 지정
+
+```bash
+function randomCoordinate(): { x: number; y: number } {
+  return { x: 34, y: 2 };
+}
+
+randomCoordinate({1, 2});
+```
+
+위와 같이 리턴할 객체 내의 프로퍼티에 대해 타입 지정이 가능하다.
 
 ---
 
