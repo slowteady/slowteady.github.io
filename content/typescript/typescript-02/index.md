@@ -24,9 +24,10 @@ const colors: Array<string> = [];
 
 위와 같이 제네릭을 이용하여 기본 타입을 설정할 수 있다.
 
-② 빌트인 제네릭  
+② 빌트인 제네릭
 
 ❓ 빌트인 제네릭이란?
+
 > 타입스크립트에 내장된 제네릭으로, 타입스크립트에서 제공하는 내장 데이터 구조(Array, Promise, map 등)나 함수에서 사용된다.
 
 ```bash
@@ -75,7 +76,7 @@ identity<Cat>({name: "json", breed: "no"});
 화살표 함수로 구현할 때, JSX의 Fragment를 의미하는 <></>의 기호와 제네릭 기호인 <>와 혼동될 수 있다.
 따라서, TSX 환경에서는 제네릭의 <> 기호에 후행 쉼표를 붙여 구분한다.
 
-```bash
+````bash
 const getRandomElement = <T,>(list: T[]): T => {
   return list[0];
 }
@@ -83,8 +84,42 @@ const getRandomElement = <T,>(list: T[]): T => {
 
 위와 같이 표현하여 제네릭을 사용할 수 있다.
 
+⑤ 여러개의 타입
+
+```bash
+function merge<T,U>(object1: T, object2: U) {
+  return {
+    ...object1,
+    ...object2
+  }
+}
+
+const comboObj = merge({name: 'colt' }, { pets: ["blue", "elton"] });
+// = merge<{name: string}, {pets: string[]}>({name: 'colt' }, { pets: ["blue", "elton"] });
+
+````
+
+위와 같이 여러개의 제네릭을 다룰 수도 있다.
+
+⑥ extends 키워드
+
+```bash
+function merge<T extends object, U extends object>(object1: T, object2: U) {
+  return {
+    ...object1,
+    ...object2
+  }
+}
+```
+
+위와 같이 extends 키워드를 사용하여 제네릭의 타입을 제한할 수 있다.
+
 ---
 
 📂 **참고자료**
 
 - [유데미 타입스크립트 강의](https://www.udemy.com/share/1073Ug3@-b0NZ_2ntkpPQxEojOh7bZ_Bdk_5cNC7JDGVyKktIJkjkzdPxS-pM6zRv-qY_lfG7w==/)
+
+```
+
+```
