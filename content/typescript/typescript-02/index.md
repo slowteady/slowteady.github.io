@@ -119,7 +119,3 @@ function merge<T extends object, U extends object>(object1: T, object2: U) {
 📂 **참고자료**
 
 - [유데미 타입스크립트 강의](https://www.udemy.com/share/1073Ug3@-b0NZ_2ntkpPQxEojOh7bZ_Bdk_5cNC7JDGVyKktIJkjkzdPxS-pM6zRv-qY_lfG7w==/)
-
-```
-
-```
