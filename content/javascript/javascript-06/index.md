@@ -33,7 +33,7 @@ Lexical Environment, 렉시컬 환경은 컨텍스트의 변수 환경과 스코
 함수를 호출할 때 마다 실행 컨텍스트를 생성하게 되는데, 이 때 렉시컬 환경이라는 객체가 생성된다.  
 렉시컬 환경에는 Environment Record와 Outer Environment Reference가 존재한다.
 > Environment Record: 현재 실행중인 컨텍스트에서 정의한 변수, 함수 정보 등을 가지고 있고 이를 통해 스코프 체인을 생성한다.  
-Outer Environment Reference: 자바스크립트 내부 슬롯이고 외부 실행 컨텍스트를 참조할 수 있게 해주어 스코프 체인이 구성된다.
+> Outer Environment Reference: 자바스크립트 내부 슬롯이고 외부 실행 컨텍스트를 참조할 수 있게 해주어 스코프 체인이 구성된다.
 
 ## ✔ 클로저
 
