@@ -10,6 +10,8 @@ categories: http
 
 ## ✔ 네트워크 기초
 
+### 1. 인터넷 네트워크
+
 **① IP(인터넷 프로토콜)**
 
 ㅇ IP 주소를 통해 패킷이라는 통신 단위로 데이터를 전달한다.  
@@ -38,6 +40,25 @@ categories: http
 ㅇ 도메인 네임 시스템(Domain Name System)의 줄임말이다.  
 ㅇ IP를 사람이 기억하기 쉬운 이름으로 도메인 명을 IP 주소로 변환한다.
 
+---
+
+### 2. URL
+
+![url.png](url.png)
+
+**① URI**  
+ㅇ URI(Resource Identifier)는 URL(Resource Locator)와 URN(Resource Name)을 포함하는 단어다.
+
+**② URL**  
+ㅇ 리소스가 있는 위치를 지정한다.  
+ㅇ 주로 프로토콜을 사용하는데, http, https, ftp 등이 있다.  
+ㅇ #뒤에 오는 리소스를 Fragment라고 부른다.  
+❓ Fragment?
+> html 내부 북마크 등에 사용되고 서버에 전송하는 정보가 아니다.
+
+**③ URN**  
+ㅇ 리소스에 이름을 부여한다.  
+ㅇ URN 이름으로 실제 리소스를 찾을 수 있는 방법이 보편화 되어있지 않다.
 
 ---
 
