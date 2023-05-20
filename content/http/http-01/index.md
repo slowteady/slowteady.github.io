@@ -6,7 +6,7 @@ tags: http
 categories: http
 ---
 
-![http-logo.png](http-logo.png)
+![http.png](http.png)
 
 ## ✔ 네트워크 기초
 
