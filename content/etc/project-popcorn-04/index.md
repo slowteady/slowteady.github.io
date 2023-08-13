@@ -32,7 +32,7 @@ Mui를 이용하여 리스트 페이지의 레이아웃을 구현했다.
 
 **④ 무한 스크롤**  
 페이징 처리를 위해 무한 스크롤을 차용했다.  
-구현 속도를 위해 react-intersection-observer 라이브러리를 사용했고 Inview 컴포넌트를 이용하여 구현했다.  
+빠른 구현 속도를 위해 react-intersection-observer 라이브러리를 사용했고 Inview 컴포넌트를 이용하여 구현했다.  
 
 ```javascript
 const handleView = (inView: boolean) => {
