@@ -6,7 +6,7 @@ tags: 배포 gcp google cloud
 categories: infra
 ---
 
-## ✔ 구글 클라우드(Google Cloud Platform)
+## ✔ 구글 클라우드(Google Cloud Platform)로 배포하기
 
 ## 구글 클라우드 배포
 
@@ -180,6 +180,6 @@ public key를 복사하여 Compute Engine의 메타데이터의 SSH키로 추가
 
 접속 성공. SFTP도 동일하게 추가해주고 웹서버, 서버를 구축한다.
 
-> 필요시 서버, 웹서버 구축 후에 https 적용과 도메인을 적용한다.
+> 필요시 서버, 웹서버 구축 후에 https 적용과 [도메인을 적용](https://slowteady.github.io/infra/gcp-02/)한다.
 
 ---
