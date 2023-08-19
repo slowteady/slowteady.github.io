@@ -143,4 +143,43 @@ Updating service [default]...⠼
 gcloud app deploy 명령어를 통해 배포를 진행하고 배포가 완료될 때 까지 기다린다.  
 배포 완료 후, gcloud app browse 명령어로 배포된 것을 확인할 수 있다.
 
+### 2. Compute Engine
+
+> OS 환경을 제공 받아 웹서버와 서버의 환경을 직접 구축할 수 있다.
+
+#### 2-1. VM 인스턴스 생성
+
+![인스턴스 생성](image-4.png)
+![인스턴스 생성](image-5.png)
+![인스턴스 생성](image-6.png)
+![인스턴스 생성](image-7.png)
+
+다음과 같이 환경에 맞게 인스턴스를 구성한다.  
+
+#### 2-2. SSH 접속
+
+![ssh 접속](image-10.png)
+> SSH를 다른 프로그램으로 접속하지 않고 위와 같이 바로 접속할 수도 있다.  
+> 하지만 SFTP가 사용 불가능하기 때문에 필요 여부에 따라 판단하면 된다.
+
+![key 생성](image-8.png)
+
+ssh 환경에 접속할 프로그램으로 Keychain을 RSA 타입으로 생성한다.  (위는 Termius 프로그램)
+
+![key 추가](image-9.png)
+
+public key를 복사하여 Compute Engine의 메타데이터의 SSH키로 추가한다.  
+> key의 맨 마지막 부분에 접속할 hostname을 적는다  
+> ex) ssh-rsa asdasd == test
+
+![접속정보 입력](image-11.png)
+
+위와 같이 key 추가와 함께 접속 정보를 입력한다.
+
+![접속 성공](image-12.png)
+
+접속 성공. SFTP도 동일하게 추가해주고 웹서버, 서버를 구축한다.
+
+> 필요시 서버, 웹서버 구축 후에 https 적용과 도메인을 적용한다.
+
 ---
