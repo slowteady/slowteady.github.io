@@ -46,14 +46,14 @@ categories: etc
 
 다른 스타일의 템플릿을 원한다면 [Gatsby Starters](https://www.gatsbyjs.com/starters)를 이용하면 된다.
 
-ㅇ **템플릿 설치**
+#### 템플릿 설치
 
 ```bash
 npm install gatsby-cli
 gatsby new blog-start https://github.com/zoomkoding/zoomkoding-gatsby-blog
 ```
 
-ㅇ **npm start**
+#### npm start
 
 ```bash
 cd blog-start
@@ -83,13 +83,13 @@ git push -u origin main
 
 깃헙 페이지스로 바로 deploy 시키면 컴파일된 파일들로 덮어 씌워지기 때문에 branch를 만들어야한다.
 
-ㅇ **gh-pages 설치**
+**gh-pages 설치**
 
 ```bash
 npm install gh-pages --save-dev
 ```
 
-ㅇ **package.json에 script 추가**
+**package.json에 script 추가**
 
 ```json
 {
@@ -99,7 +99,7 @@ npm install gh-pages --save-dev
 }
 ```
 
-ㅇ **명령 실행**
+**명령 실행**
 
 ```bash
 npm run deploy
@@ -168,8 +168,7 @@ secrets.ACCESS_TOKEN은 설정한 secrets 변수 이름과 맞춰주면 된다.
 git push후 정상적으로 동작하는지 확인한다.
 
 ---
-
-ㅇ **참고자료**
+**참고자료**
 
 - [gparkkii님 글](https://velog.io/@gparkkii/build-gatsby-blog)
 - [줌코딩님 글](https://www.zoomkoding.com/gatsby-starter-zoomkoding-introduction/)

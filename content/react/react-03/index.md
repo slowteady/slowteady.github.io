@@ -12,7 +12,7 @@ categories: react
 
 React Hooks는 React v16.8 기준으로 등장하여 함수형 컴포넌트에서 다양한 기능을 사용할 수 있게 도와준다.
 
-## 1. useState
+### 1. useState
 
 ```bash
   Const [state, setState] = useState(initialState);
@@ -44,7 +44,7 @@ React Hooks는 React v16.8 기준으로 등장하여 함수형 컴포넌트에�
 ② prev를 이용하여 이전 state값을 사용할 수 있다.  
 ③ props를 전달할 때는 위와 같이 element에 값을 할당하여 전달한다.
 
-### ❗️ 결과
+#### ❗️ 결과
 
 ![react-01.png](react-01.png)  
 ㅇ + 버튼 클릭 시 1씩 증가한다.  
@@ -53,7 +53,7 @@ React Hooks는 React v16.8 기준으로 등장하여 함수형 컴포넌트에�
 
 ---
 
-## 2. useEffect
+### 2. useEffect
 
 useEffect는 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하도록 도와준다.
 
@@ -90,7 +90,7 @@ useEffect는 컴포넌트가 렌더링 될 때마다 특정 작업을 수행하�
 
 ---
 
-## 3. useRef
+### 3. useRef
 
 ```bash
 const lecture = () => {
@@ -125,14 +125,14 @@ const lecture = () => {
 ② element를 제어할 때, **변수.current**를 통하여 객체 접근하여 제어할 수 있다.  
 ③ DOM에 위와 같이 **ref={변수}** 형태로 사용한다.
 
-### ❗️결과
+#### ❗️결과
 
 ![react-02.png](react-02.png)  
 제출 버튼을 클릭해도 focus가 유지된다.
 
 ---
 
-## 4. useMemo
+### 4. useMemo
 
 ```bash
 const getSum = numbers => {
@@ -180,7 +180,7 @@ const lecture = () => {
 
 > ❗️ 함수형 컴포넌트는 클래스형과 달리 state의 변화를 감지하여 리렌더링 시, 함수 컴포넌트 자체를 다시 실행하기 때문에 함수가 계속 호출된다.
 
-### ❗️결과
+#### ❗️결과
 
 ![react-03.png](react-03.png)
 위와 같이 값 입력 시 마다 값이 갱신되고, 이는 성능 저하로 이어진다.  
@@ -195,7 +195,7 @@ const lecture = () => {
 값을 기억했다가 변화를 감지했을 때 새로운 값을 내어주는 방식이다.  
 위의 경우 list의 값 변화를 감지했을 때, 값을 갱신한다.
 
-### ❗️결과
+#### ❗️결과
 
 ![react-04.png](react-04.png)
 
@@ -203,7 +203,7 @@ const lecture = () => {
 
 ---
 
-## 5. useCallback
+### 5. useCallback
 
 ```bash
 const onChange = useCallback((e) => { # ① useCallback 사용
@@ -227,7 +227,7 @@ useCallback은 useMemo를 좀 더 간단하게 함수에 사용하기 위해 사
 
 ---
 
-## 6. useContext
+### 6. useContext
 
 Props는 기본적으로 부모 컴포넌트가 자식 컴포넌트에게 넘겨준다.  
 그러다보니 한참 아래에 있는 자식 컴포넌트에게까지 Props를 전달해주기 위해서는 전달의 전달을 거쳐서 가야한다는 문제점이 발생한다.  
@@ -263,7 +263,7 @@ const Context = () => {
 
 ---
 
-## 7. useReducer
+### 7. useReducer
 
 useReducer는 useState를 대체할 수 있다.  
 관리해야할 state가 많아져 조금 더 복잡한 상태 관리가 필요한 경우에 적합하다.
