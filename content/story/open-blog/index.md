@@ -3,7 +3,7 @@ title: 블로그 생성기 with Gatsby
 date: '2023-01-23 00:00:00'
 author: 이용민
 tags: 블로그 github-pages gatsby
-categories: etc
+categories: story
 ---
 
 ![open-blog-1.png](open-blog-1.png)
