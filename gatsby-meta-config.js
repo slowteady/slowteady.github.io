@@ -14,7 +14,7 @@ module.exports = {
     name: `이용민`,
     bio: {
       role: `개발자`,
-      description: ['Slow But Steady', '대기만성형'],
+      description: ['Slow But Steady', '마라토너 같은'],
       thumbnail: 'me.png', // Path to the image in the 'asset' folder
     },
     social: {
