@@ -1,5 +1,5 @@
+import { Tab, Tabs } from '@mui/material';
 import React, { useMemo } from 'react';
-import { Tabs, Tab } from '@mui/material';
 import PostCardColumn from '../post-card-column';
 import './style.scss';
 
@@ -17,7 +17,7 @@ function PostTabs({ tabIndex, onChange, tabs, posts, showMoreButton }) {
           value={tabIndex}
           onChange={onChange}
           variant="scrollable"
-          scrollButtons="desktop"
+          scrollButtons={true}
         >
           {tabs.map((title, index) => (
             <Tab label={title} key={index} />
