@@ -1,5 +1,5 @@
 ---
-title: Git-flow
+title: 협업을 위한 Git-flow
 date: '2023-08-26 00:00:00'
 author: 이용민
 tags: git flow
