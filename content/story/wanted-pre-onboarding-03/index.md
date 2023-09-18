@@ -260,4 +260,16 @@ function App() {
 
 - 추상화 수준을 맞춰 분기처리를 하면, 코드의 가독성이 향상되고 직관적으로 이해 시킬 수 있다.
 
+### 2. 소프트웨어 테스트와 TDD
+
+JEST는 자바스크립트 테스팅 라이브러리, RTL은 React-Testing-Library이다.  
+코드를 통해 테스트를 자동화 할 수 있게 도와주며 최근 TDD 라고하는 방법론에 의해 각광받고 있다.  
+[소프트웨어 테스트와 TDD 개념 정리 글](https://slowteady.github.io/work/software-test)
+
+### 3. 실행 컨텍스트와 클로저
+
+멘토님과 직접 React Hooks를 구현해보면서 이해도를 높혔다.  
+내용을 업데이트하여 다시 정리를 해보았다.  
+[실행 컨텍스트와 클로저 정리 글](https://slowteady.github.io/javascript/javascript-06/)
+
 ---
