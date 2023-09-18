@@ -3,7 +3,7 @@ title: 소프트웨어 테스트와 TDD
 date: '2023-09-18 00:00:00'
 author: 이용민
 tags: tdd software test
-categories: story
+categories: work
 ---
 
 ## 소프트웨어 테스트와 TDD
