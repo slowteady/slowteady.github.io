@@ -36,9 +36,9 @@ console.dir(animal);
 [[Prototype]]은 상속을 구현하는데 사용되고 __proto__로 접근할 수 있다.  
 __proto__프로퍼티에 접근하면 내부적으로 **Object.getPrototypeOf**가 호출되어 프로토타입 객체를 반환한다.
 
-### 1. `__proto__`, [[Prototype]], prototype 프로퍼티
+### 1. \__proto__, [[Prototype]], prototype 프로퍼티
 
-#### 1-1. `__proto__`  
+#### 1-1. \__proto__  
 
 모든 객체가 가지고 있고, 자신의 부모 역할을 하는 프로토타입 객체를 가리키는 참조 링크 역할을 한다.  
 그래서 객체는 상속을 받아 부모 객체의 프로퍼티와 메소드를 사용할 수 있게된다.
